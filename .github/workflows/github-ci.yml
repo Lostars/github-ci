@@ -1,0 +1,17 @@
+name: GITHUB-CI
+on:
+  push:
+    branches:
+      - '**'
+  release:
+    types:
+      - created
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run shell
+        run: echo hello github ci
+
